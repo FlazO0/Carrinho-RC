@@ -1,9 +1,9 @@
 # Carro RC Bluetooth
 
-## Descrição
+### Descrição
 Este projeto demonstra como construir e controlar um carro RC utilizando comunicação Bluetooth e uma placa Arduino. Ele permite controlar o carro através de comandos enviados de um dispositivo com Bluetooth, como um smartphone. O carro opera com dois motores DC controlados por um driver H-Bridge, e a velocidade é regulada via PWM (modulação por largura de pulso).
 
-## Funcionalidades
+### Funcionalidades
 - **Controle Bluetooth**: Controle o carro usando comandos enviados via Bluetooth.
 - **Ajuste de Velocidade**: Velocidade ajustável em incrementos com base nos comandos recebidos.
 - **Controle Direcional**: Suporta movimentos para frente, para trás, para esquerda e para direita.
@@ -12,7 +12,7 @@ Este projeto demonstra como construir e controlar um carro RC utilizando comunic
 
 ---
 
-## Componentes Necessários
+### Componentes Necessários
 1. **Arduino (ex: ESP32 ou qualquer placa compatível)**
 2. **Módulo Bluetooth (ex: HC-05 ou Bluetooth embutido no ESP32)**
 3. **Driver H-Bridge (ex: L298N)**
@@ -23,7 +23,7 @@ Este projeto demonstra como construir e controlar um carro RC utilizando comunic
 
 ---
 
-## Como Funciona
+### Como Funciona
 1. **Comunicação Bluetooth**: O Arduino fica ouvindo comandos via Bluetooth, que são enviados de um dispositivo pareado, como um smartphone.
 2. **Controle de Motores**: Os comandos são mapeados para ações específicas, como ajustar a velocidade, mudar de direção ou parar o carro.
 3. **Controle de Velocidade via PWM**: A velocidade do carro é regulada através de sinais PWM nas entradas de habilitação do driver de motor.
@@ -31,7 +31,7 @@ Este projeto demonstra como construir e controlar um carro RC utilizando comunic
 
 ---
 
-## Comandos
+### Comandos
 O carro RC responde aos seguintes sinais Bluetooth:
 
 | Comando | Ação                    |
@@ -46,7 +46,7 @@ O carro RC responde aos seguintes sinais Bluetooth:
 
 ---
 
-## Diagrama do Circuito
+### Diagrama do Circuito
 - Conecte os pinos de habilitação do H-Bridge aos pinos PWM definidos no código (`enA` e `enB`).
 - Conecte os pinos de controle de motor (`IN1`, `IN2`, `IN3`, e `IN4`) ao driver H-Bridge.
 - Certifique-se de fornecer energia para os motores através do H-Bridge.
@@ -54,7 +54,7 @@ O carro RC responde aos seguintes sinais Bluetooth:
 
 ---
 
-## Visão Geral do Código
+### Visão Geral do Código
 1. **Setup**: Inicializa a comunicação Bluetooth, configura os pinos PWM para controle de velocidade e define o estado inicial dos motores (parados).
 2. **Loop Principal**: Verifica continuamente os sinais Bluetooth e executa as funções correspondentes.
 3. **Funções**:
@@ -66,17 +66,16 @@ O carro RC responde aos seguintes sinais Bluetooth:
 
 ---
 
-## Configuração
+### Configuração
 - Modifique a variável `Speed` no código para ajustar a velocidade inicial do carro. A velocidade pode ser incrementada com os comandos (`0`-`9`) ou configurada para o valor máximo com o comando `q`.
 - Certifique-se de que a frequência e a resolução do PWM estejam configuradas corretamente de acordo com o driver de motor utilizado.
 
 ---
 
-## Exemplos de Uso
-1. Emparelhe seu dispositivo com o módulo Bluetooth.
-2. Abra um aplicativo de terminal Bluetooth.
-3. Envie comandos (`F`, `B`, `L`, `R`, `S`, etc.) para controlar o carro.
-4. Observe o carro respondendo aos comandos em tempo real.
+### Exemplos de Uso
+1. Use o aplicativo do diretorio perfeito para comunicar com o carrinho.
+2. Envie comandos (`F`, `B`, `L`, `R`, `S`, etc.) para controlar o carro.
+3. Observe o carro respondendo aos comandos em tempo real.
 
 ---
 
